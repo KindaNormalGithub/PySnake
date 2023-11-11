@@ -1,2 +1,23 @@
-# PySnake
- Explore the classic Python arcade game, "Snake Adventure," crafted with the Pygame library. Dive into the grid-based world, guiding the snake to devour blue orbs and extend its length. Maneuver wisely to avoid collisions with the snake's own body. It's a straightforward yet engaging journey into the realm of arcade simplicity. Enjoy the game! 🐍 (Description Writen with ChatGPT)
+# Snake Adventure - Python Arcade Game
+
+Welcome to "Snake Adventure," a classic Python-based arcade game developed using the Pygame library.
+
+## Getting Started
+
+1. **Prerequisites:**
+   - Install Python: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+   - Install Pygame: Open your terminal and run `pip install pygame`
+
+2. **Clone and Run:**
+   ```bash
+   git clone https://github.com/your-username/snake-adventure.git
+   cd snake-adventure
+   python main.py
+
+Now you're ready to enjoy the game!
+Connect with the Developer
+
+Follow @Pe4nutLord on Twitter for updates, gaming insights, and more! Feel free to reach out with feedback or just to say hi.
+License
+
+This project is licensed under the MIT License.
