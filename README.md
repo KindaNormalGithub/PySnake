@@ -1,6 +1,6 @@
-# Snake Adventure - Python Arcade Game
+# PySnake - Python Arcade Game
 
-Welcome to "Snake Adventure," a classic Python-based arcade game developed using the Pygame library.
+Welcome to "PySnake," a classic Python-based arcade game developed using the Pygame library.
 
 ## Getting Started
 
@@ -10,9 +10,9 @@ Welcome to "Snake Adventure," a classic Python-based arcade game developed using
 
 2. **Clone and Run:**
    ```bash
-   git clone https://github.com/your-username/snake-adventure.git
-   cd snake-adventure
-   python main.py
+   git clone https://github.com/pe4nutlord/PySnake.git
+   cd pysnake
+   python pysnake.py
 
 Now you're ready to enjoy the game!
 Connect with the Developer
