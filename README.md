@@ -17,7 +17,7 @@ Welcome to "PySnake," a classic Python-based arcade game developed using the Pyg
 Now you're ready to enjoy the game!
 Connect with the Developer
 
-Follow @Pe4nutLord on Twitter for updates, gaming insights, and more! Feel free to reach out with feedback or just to say hi.
+Follow @Pe4nutLord on Twitter for updates and more! Feel free to reach out with feedback or just to say hi.
 License
 
 This project is licensed under the MIT License.
