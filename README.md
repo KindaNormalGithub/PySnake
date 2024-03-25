@@ -12,7 +12,7 @@ Welcome to "PySnake," a classic Python-based arcade game developed using the Pyg
    ```bash
    git clone https://github.com/pe4nutlord/PySnake.git
    cd pysnake
-   python pysnake.py
+   python snake.py
 
 Now you're ready to enjoy the game!
 Connect with the Developer
