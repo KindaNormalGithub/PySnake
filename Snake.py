@@ -4,30 +4,26 @@ import random
 
 pygame.init()
 
-# Constants
 WIDTH, HEIGHT = 800, 600
 GRID_SIZE = 20
 FPS = 10
 
-# Colors
 BACKGROUND_COLOR = (254, 115, 119)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-# Game states
 MENU = 0
 GAME = 1
 INSTRUCTIONS = 2
 OPTIONS = 3
 
-# Snake class
 class Snake:
     def __init__(self):
         self.length = 1
         self.positions = [((WIDTH // 2), (HEIGHT // 2))]
-        self.directions = [(0, 0)]  # Store directions as tuples
+        self.directions = [(0, 0)]
         self.color = GREEN
 
     def get_head_position(self):
@@ -35,7 +31,7 @@ class Snake:
 
     def update(self):
         cur = self.get_head_position()
-        x, y = self.directions[0] if self.directions else (0, 0)  # Use the first element of directions if it exists
+        x, y = self.directions[0] if self.directions else (0, 0)
         new = (((cur[0] + (x * GRID_SIZE)) % WIDTH), (cur[1] + (y * GRID_SIZE)) % HEIGHT)
         if len(self.positions) > 2 and new in self.positions[2:]:
             self.reset()
@@ -45,20 +41,18 @@ class Snake:
                 self.positions.pop()
 
     def set_direction(self, direction):
-        # Ensure the direction is a tuple
         if direction in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             self.directions.insert(0, direction)
 
     def reset(self):
         self.length = 1
         self.positions = [((WIDTH // 2), (HEIGHT // 2))]
-        self.directions = [(0, 0)]  # Reset directions
+        self.directions = [(0, 0)]
 
     def render(self, surface):
         for p in self.positions:
             pygame.draw.rect(surface, self.color, (p[0], p[1], GRID_SIZE, GRID_SIZE))
 
-# Food class
 class Food:
     def __init__(self):
         self.position = (0, 0)
@@ -72,7 +66,6 @@ class Food:
     def render(self, surface):
         pygame.draw.rect(surface, self.color, (self.position[0], self.position[1], GRID_SIZE, GRID_SIZE))
 
-# Menu class
 class MainMenu:
     def __init__(self):
         self.font_large = pygame.font.Font(None, 72)
@@ -101,7 +94,6 @@ class MainMenu:
                 return "Play"
         return None
 
-# Game initialization
 screen = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
@@ -109,10 +101,8 @@ snake = Snake()
 food = Food()
 menu = MainMenu()
 
-# Initial game state
 game_state = MENU
 
-# Main game loop
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -144,7 +134,6 @@ while True:
     elif game_state == GAME:
         snake.update()
 
-        # Check if the snake eats the food
         if snake.get_head_position() == food.position:
             snake.length += 1
             food.randomize_position()
